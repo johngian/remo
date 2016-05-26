@@ -42,7 +42,7 @@
               {% for action_item in action_items %}
                 <tr>
                   <td>
-                    <a href="{{ action_item.get_absolute_url() }}">{{ action_item }}</a>
+                    <a href="{{ action_item.get_absolute_url() }}">{{ action_item | get_smart_text }}</a>
                   </td>
                   <td>
                     {% if action_item.due_date %}
@@ -111,7 +111,7 @@
                       {{ action_item.user.get_full_name() }}
                   </td>
                   <td>
-                    <a href="{{ action_item.get_absolute_url() }}">{{ action_item }}</a>
+                    <a href="{{ action_item.get_absolute_url() }}">{{ action_item | get_smart_text }}</a>
                   </td>
                   <td>
                     {% if action_item.due_date %}
@@ -443,12 +443,12 @@
                 </td>
                 <td>
                   <div class="hide-for-small">
-                    <div class="overflow-fix" title="{{ bug.summary }}">
-                      {{ bug.summary }}
+                    <div class="overflow-fix" title="{{ bug.summary | get_smart_text }}">
+                      {{ bug.summary | get_smart_text }}
                     </div>
                   </div>
                   <div class="show-for-small">
-                    {{ bug.summary }}
+                    {{ bug.summary | get_smart_text }}
                   </div>
                 </td>
                 <td>{{ bug.whiteboard }}</td>
@@ -509,12 +509,12 @@
                   </td>
                   <td>
                     <div class="hide-for-small">
-                      <div class="overflow-fix" title="{{ bug.summary }}">
-                        {{ bug.summary }}
+                      <div class="overflow-fix" title="{{ bug.summary | get_smart_text }}">
+                        {{ bug.summary | get_smart_text }}
                       </div>
                     </div>
                     <div class="show-for-small">
-                      {{ bug.summary }}
+                      {{ bug.summary | get_smart_text }}
                     </div>
                   </td>
                   <td>{{ bug.whiteboard }}</td>
@@ -568,12 +568,12 @@
                   </td>
                   <td>
                     <div class="hide-for-small">
-                      <div class="overflow-fix" title="{{ bug.summary }}">
-                        {{ bug.summary }}
+                      <div class="overflow-fix" title="{{ bug.summary | get_smart_text }}">
+                        {{ bug.summary | get_smart_text }}
                       </div>
                     </div>
                     <div class="show-for-small">
-                      {{ bug.summary }}
+                      {{ bug.summary | get_smart_text }}
                     </div>
                   </td>
                   <td>{{ bug.whiteboard }}</td>
@@ -674,12 +674,12 @@
                 </td>
                 <td>
                   <div class="hide-for-small">
-                    <div class="overflow-fix" title="{{ bug.summary }}">
-                      {{ bug.summary }}
+                    <div class="overflow-fix" title="{{ bug.summary | get_smart_text }}">
+                      {{ bug.summary | get_smart_text }}
                     </div>
                   </div>
                   <div class="show-for-small">
-                    {{ bug.summary }}
+                    {{ bug.summary | get_smart_text }}
                   </div>
                 </td>
                 <td>{{ bug.whiteboard }}</td>
@@ -740,12 +740,12 @@
                   </td>
                   <td>
                     <div class="hide-for-small">
-                      <div class="overflow-fix" title="{{ bug.summary }}">
-                        {{ bug.summary }}
+                      <div class="overflow-fix" title="{{ bug.summary | get_smart_text }}">
+                        {{ bug.summary | get_smart_text }}
                       </div>
                     </div>
                     <div class="show-for-small">
-                      {{ bug.summary }}
+                      {{ bug.summary | get_smart_text }}
                     </div>
                   </td>
                   <td>{{ bug.whiteboard }}</td>
@@ -799,12 +799,12 @@
                   </td>
                   <td>
                     <div class="hide-for-small">
-                      <div class="overflow-fix" title="{{ bug.summary }}">
-                        {{ bug.summary }}
+                      <div class="overflow-fix" title="{{ bug.summary | get_smart_text }}">
+                        {{ bug.summary | get_smart_text }}
                       </div>
                     </div>
                     <div class="show-for-small">
-                      {{ bug.summary }}
+                      {{ bug.summary | get_smart_text }}
                     </div>
                   </td>
                   <td>{{ bug.whiteboard }}</td>
@@ -883,12 +883,12 @@
                   </td>
                   <td>
                     <div class="hide-for-small">
-                      <div class="overflow-fix" title="{{ bug.summary }}">
-                        {{ bug.summary }}
+                      <div class="overflow-fix" title="{{ bug.summary | get_smart_text }}">
+                        {{ bug.summary | get_smart_text }}
                       </div>
                     </div>
                     <div class="show-for-small">
-                      {{ bug.summary }}
+                      {{ bug.summary | get_smart_text }}
                     </div>
                   </td>
                   <td>{{ bug.whiteboard }}</td>
@@ -952,12 +952,12 @@
                   </td>
                   <td>
                     <div class="hide-for-small">
-                      <div class="overflow-fix" title="{{ bug.summary }}">
-                        {{ bug.summary }}
+                      <div class="overflow-fix" title="{{ bug.summary | get_smart_text }}">
+                        {{ bug.summary | get_smart_text }}
                       </div>
                     </div>
                     <div class="show-for-small">
-                      {{ bug.summary }}
+                      {{ bug.summary | get_smart_text }}
                     </div>
                   </td>
                   <td>{{ bug.whiteboard }}</td>
@@ -1021,12 +1021,12 @@
                   </td>
                   <td>
                     <div class="hide-for-small">
-                      <div class="overflow-fix" title="{{ bug.summary }}">
-                        {{ bug.summary }}
+                      <div class="overflow-fix" title="{{ bug.summary | get_smart_text }}">
+                        {{ bug.summary | get_smart_text }}
                       </div>
                     </div>
                     <div class="show-for-small">
-                      {{ bug.summary }}
+                      {{ bug.summary | get_smart_text }}
                     </div>
                   </td>
                   <td>{{ bug.whiteboard }}</td>
