@@ -396,14 +396,31 @@ REST_FRAMEWORK = {
 }
 
 # Cache
-CACHES = {
-    'default': {
-        'BACKEND': config('CACHE_BACKEND',
-                          default='django.core.cache.backends.memcached.MemcachedCache'),
-        'LOCATION': config('CACHE_URL', default='127.0.0.1:11211'),
-        'KEY_PREFIX': config('CACHE_KEY_PREFIX', default='remo')
+CACHE_BACKEND = config(
+    'CACHE_BACKEND',
+    default='django.core.cache.backends.memcached.MemcachedCache'
+)
+
+if CACHE_BACKEND == 'django_bmemcached.memcached.BMemcached':
+    CACHES = {
+        'default': {
+            'BACKEND': CACHE_BACKEND,
+            'LOCATION': config('MEMCACHIER_SERVERS'),
+            'OPTIONS': {
+                'username': config('MEMCACHIER_USERNAME'),
+                'password': config('MEMCACHIER_PASSWORD')
+            }
+        }
     }
-}
+else:
+    CACHES = {
+        'default': {
+            'BACKEND': config('CACHE_BACKEND'),
+            'LOCATION': config('CACHE_URL', default='127.0.0.1:11211'),
+            'KEY_PREFIX': config('CACHE_KEY_PREFIX', default='remo')
+        }
+    }
+
 
 if DEV:
     CSP_DEFAULT_SRC += (
